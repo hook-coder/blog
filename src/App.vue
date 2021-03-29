@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <div class="content">
-      <Aside/>
-      <Main/>
-    </div>
+    <router-view></router-view>
     <Footer/>
     <FloatBtns/>
     <Bg/>
@@ -14,15 +11,13 @@
 <script>
 import Bg from './components/Bg.vue';
 import Header from './components/Header.vue';
-import Aside from './components/Aside.vue';
-import Main from './components/Main.vue';
 import Footer from './components/Footer.vue';
 import FloatBtns from './components/FloatBtns.vue';
 
 export default {
   name: 'App',
   components: {
-    Bg,Header,Footer,Aside,Main,FloatBtns
+    Bg,Header,Footer,FloatBtns
   }
 }
 </script>

@@ -15,13 +15,14 @@
           background-color="#fff"
           text-color="#636e75"
           :active-text-color="mainColor"
+          router
         >
-          <el-menu-item index="1">博客首页</el-menu-item>
-          <el-menu-item index="2">归档</el-menu-item>
-          <el-submenu index="3">
+          <el-menu-item index="/">博客首页</el-menu-item>
+          <el-menu-item index="archive">归档</el-menu-item>
+          <el-submenu index="other">
             <template slot="title">其他</template>
-            <el-menu-item index="3-1">摸鱼</el-menu-item>
-            <el-menu-item index="3-2">留言板</el-menu-item>
+            <el-menu-item index="other">摸鱼</el-menu-item>
+            <el-menu-item index="other">留言板</el-menu-item>
           </el-submenu>
           <el-menu-item style="padding: 0">
             <el-dropdown placement="bottom">
@@ -63,7 +64,7 @@ export default {
   name: "Header",
   data() {
     return {
-      activeIndex: "1",
+      activeIndex: "/",
       mainColor: "#1a9dff", //激活标签颜色
     };
   },
@@ -159,6 +160,11 @@ $mianColr: #1a9dff;
         align-items: center;
         justify-content: center;
         height: 100%;
+      }
+      > a{
+        height: 100%;
+        display:flex;
+        align-items: center;
       }
     }
   }

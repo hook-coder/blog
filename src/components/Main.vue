@@ -9,7 +9,7 @@
       <div class="welcome-right">
         <span class="title">
           <span>博客简介</span>
-          <span class="english-title">—INTRODUCTION</span>
+          <span class="english-title">—INTRODUcontentCTION</span>
         </span>
         <div class="common-content">
           <p>
