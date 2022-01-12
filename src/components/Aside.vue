@@ -127,9 +127,9 @@
   </div>
 </template>
 
-<script lang="ts">
-import { toRef } from 'vue'
-let obj = [{
+<script lang="ts" setup>
+import { reactive } from 'vue'
+let uploadList = reactive([{
   text: "PC端页面设计+布局",
   time: "2020-12-15",
 },
@@ -140,9 +140,8 @@ let obj = [{
 {
   text: "博客1.0.0版本",
   time: "2020-12-15",
-}];
-let uploadList = toRef(obj);
-
+}]);
+console.log(uploadList,'uploadList')
 
 </script>
 
@@ -199,7 +198,7 @@ $mianColor: #1a9dff;
         align-items: center;
         justify-content: flex-start;
         padding: 8px 0;
-        border-bottom: 1px dashed hsla(0, 0, 88.6%, 0.88);
+        border-bottom: 1px dashed #ddd;
         a {
           display: flex;
           text-decoration: none;
@@ -219,7 +218,7 @@ $mianColor: #1a9dff;
           word-wrap: break-all;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 1;
-          font-size: 15px;
+          font-size: 16px;
           text-align: left;
         }
         .essay-time {

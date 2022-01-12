@@ -18,11 +18,11 @@
         >
           <el-menu-item index="/">首页</el-menu-item>
           <el-menu-item index="archive">归档</el-menu-item>
-          <el-sub-menu index="other">
+          <!-- <el-sub-menu index="other">
             <template #title>其他</template>
             <el-menu-item index="other">摸鱼</el-menu-item>
             <el-menu-item index="other">留言板</el-menu-item>
-          </el-sub-menu>
+          </el-sub-menu> -->
           <el-menu-item>
             <el-dropdown placement="bottom">
               <span class="el-dropdown-link">
