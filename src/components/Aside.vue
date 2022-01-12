@@ -141,7 +141,6 @@ let uploadList = reactive([{
   text: "博客1.0.0版本",
   time: "2020-12-15",
 }]);
-console.log(uploadList,'uploadList')
 
 </script>
 
