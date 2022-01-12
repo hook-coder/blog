@@ -6,10 +6,9 @@
     </div>
   </div>
 </template>
-<script>
+<script lang="ts">
 import Aside from '@/components/Aside.vue'
 import Main from '@/components/Main.vue'
-
 export default {
   name:'home',
   components:{
@@ -18,6 +17,3 @@ export default {
   }  
 }
 </script>
-<style lang="">
-  
-</style>

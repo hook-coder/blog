@@ -1,10 +1,8 @@
 module.exports = {
-  chainWebpack: config => {
-    config
-      .plugin('html')
-      .tap(args => {
-        args[0].title= 'AFLY-BLOG'
-        return args
-      })
-  }
-}
+  pluginOptions: {
+    "style-resources-loader": {
+      preProcessor: "scss",
+      patterns: [],
+    },
+  },
+};

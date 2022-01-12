@@ -6,7 +6,7 @@
     </div>
   </div>
 </template>
-<script>
+<script lang="ts">
 // import Aside from '@/components/Aside.vue'
 
 export default {

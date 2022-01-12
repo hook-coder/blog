@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <Aside></Aside>
+    <!-- <Aside></Aside> -->
     <div class="archive common">
       <span class="title">
         <span>归档</span>
@@ -19,8 +19,8 @@
     </div>
   </div>
 </template>
-<script>
-import Aside from '@/components/Aside.vue'
+<script lang="ts">
+// import Aside from '@/components/Aside.vue'
 export default {
   name: "Archive",
   data() {
@@ -28,7 +28,7 @@ export default {
     };
   },
   components: {
-    Aside,
+    // Aside,
   },
 };
 </script>

@@ -37,9 +37,7 @@
         <li>
           <a href="#">
             <!-- success/info/warning/danger  中文/数字最多俩个字 英文最多4个字母-->
-            <el-tag class="essay-tag" type="danger" size="mini" effect="light"
-              >热门</el-tag
-            >
+            <el-tag class="essay-tag" type="danger" size="mini" effect="light">热门</el-tag>
             <span class="essay-text">javascript原型以及原型链</span>
             <span class="essay-time">
               <i class="el-icon-time"></i>
@@ -49,9 +47,7 @@
         </li>
         <li>
           <a href="#">
-            <el-tag class="essay-tag" type="warning" size="mini" effect="light"
-              >精选</el-tag
-            >
+            <el-tag class="essay-tag" type="warning" size="mini" effect="light">精选</el-tag>
             <span class="essay-text">学习http深入了解底层知识</span>
             <span class="essay-time">
               <i class="el-icon-time"></i>
@@ -61,9 +57,7 @@
         </li>
         <li v-for="(n, i) in 3" :key="i">
           <a href="#">
-            <el-tag class="essay-tag" type="-" size="mini" effect="plain"
-              >{{ i + 1 }}.0</el-tag
-            >
+            <el-tag class="essay-tag" type="-" size="mini" effect="plain">{{ i + 1 }}.0</el-tag>
             <span class="essay-text">学习vue3.0之初出茅庐第{{ i + 1 }}章</span>
             <span class="essay-time">
               <i class="el-icon-time"></i>
@@ -96,7 +90,7 @@
             <b>微信打赏</b>
           </span>
           <div class="play-tour-wx">
-            <img src="../assets/wxzf.png" alt="" />
+            <img src="../assets/wxzf.png"/>
           </div>
         </li>
         <li>
@@ -105,7 +99,7 @@
             <b>支付宝打赏</b>
           </span>
           <div class="play-tour-wx">
-            <img src="../assets/zfb.png" alt="" />
+            <img src="../assets/zfb.png"/>
           </div>
         </li>
       </ul>
@@ -119,42 +113,39 @@
         </span>
         <!-- 有数据显示 -->
         <div class="advertising-item" v-if="false">
-          <img src="" alt="" />
+          <!-- <img src alt /> -->
         </div>
         <!-- 无数据显示 -->
         <div class="advertising-item advertising-no-data" v-else>
-          <img src="../assets/advertising.png" alt="" />
-          <div class="no-advertising"><a href="#">暂无广告</a></div>
+          <img src="../assets/advertising.png"/>
+          <div class="no-advertising">
+            <a href="#">暂无广告</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-<script>
-export default {
-  name: "Aside",
-  data() {
-    return {
-      uploadList: [
-        {
-          text: "PC端页面设计+布局",
-          time: "2020-12-15",
-        },
-        {
-          text: "PC端组件开发",
-          time: "2020-12-15",
-        },
-        {
-          text: "博客1.0.0版本",
-          time: "2020-12-15",
-        },
-      ],
-    };
-  },
-  mounted() {},
-  methods: {},
-};
+
+<script lang="ts">
+import { toRef } from 'vue'
+let obj = [{
+  text: "PC端页面设计+布局",
+  time: "2020-12-15",
+},
+{
+  text: "PC端组件开发",
+  time: "2020-12-15",
+},
+{
+  text: "博客1.0.0版本",
+  time: "2020-12-15",
+}];
+let uploadList = toRef(obj);
+
+
 </script>
+
 <style lang="scss" scoped >
 img {
   height: 100%;

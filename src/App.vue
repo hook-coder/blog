@@ -1,23 +1,23 @@
 <template>
-  <div id="app">
-    <Header/>
-    <router-view></router-view>
-    <Footer/>
-    <FloatBtns/>
-    <Bg/>
-  </div>
+  <Header />
+  <router-view />
+  <Footer />
+  <FloatBtns />
+  <Bg />
 </template>
 
-<script>
+<script lang="ts">
 import Bg from './components/Bg.vue';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import FloatBtns from './components/FloatBtns.vue';
-
 export default {
   name: 'App',
   components: {
-    Bg,Header,Footer,FloatBtns
+    Bg,
+    Header,
+    Footer, 
+    FloatBtns
   }
 }
 </script>

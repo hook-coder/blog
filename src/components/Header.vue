@@ -4,9 +4,7 @@
       <div class="logo">AFLY-BLOG</div>
       <div class="menu">
         <div class="search">
-          <el-input placeholder="请输入内容">
-            <i class="el-icon-search el-input__icon" slot="suffix" />
-          </el-input>
+          <el-input :suffix-icon="Search" placeholder="请输入内容"></el-input>
         </div>
         <el-menu
           :default-active="activeIndex"
@@ -16,41 +14,44 @@
           text-color="#636e75"
           :active-text-color="mainColor"
           router
+          :ellipsis="false"
         >
-          <el-menu-item index="/">博客首页</el-menu-item>
+          <el-menu-item index="/">首页</el-menu-item>
           <el-menu-item index="archive">归档</el-menu-item>
-          <el-submenu index="other">
-            <template slot="title">其他</template>
+          <el-sub-menu index="other">
+            <template #title>其他</template>
             <el-menu-item index="other">摸鱼</el-menu-item>
             <el-menu-item index="other">留言板</el-menu-item>
-          </el-submenu>
-          <el-menu-item style="padding: 0">
+          </el-sub-menu>
+          <el-menu-item>
             <el-dropdown placement="bottom">
               <span class="el-dropdown-link">
                 <el-badge :is-dot="true">
-                  <i class="upload-icon el-icon-bell"></i>
+                  <el-icon><bell /></el-icon>
                 </el-badge>
               </span>
-              <el-dropdown-menu slot="dropdown">
-                <div class="upload-news-box">
-                  <div class="title">
-                    <span>通知</span>
-                    <span>消息通知</span>
-                  </div>
-                  <div class="content">
-                    <div class="icon">
-                      <i class="el-icon-success"></i>
+              <template #dropdown>
+                <el-dropdown-menu>
+                  <div class="upload-news-box">
+                    <div class="title">
+                      <span>通知</span>
+                      <span>消息通知</span>
                     </div>
-                    <div class="info">
-                      <span class="versions">AFLY-BLOG1.0</span>
-                      <span class="welcome">欢迎使用</span>
-                      <span class="update-icon"
-                        ><i class="el-icon-time" />更新：2021/1/1</span
-                      >
+                    <div class="content">
+                      <div class="icon">
+                        <el-icon size="30px" color="#409EFC"><success-filled /></el-icon>
+                      </div>
+                      <div class="info">
+                        <span class="versions">AFLY-BLOG1.0</span>
+                        <span class="welcome">欢迎使用</span>
+                        <span class="update-icon">
+                          <i class="el-icon-time" />更新：2021/1/1
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </el-dropdown-menu>
+                </el-dropdown-menu>
+              </template>
             </el-dropdown>
           </el-menu-item>
         </el-menu>
@@ -59,16 +60,11 @@
   </header>
 </template>
 
-<script>
-export default {
-  name: "Header",
-  data() {
-    return {
-      activeIndex: "/",
-      mainColor: "#1a9dff", //激活标签颜色
-    };
-  },
-};
+<script lang="ts" setup>
+import { Search, Bell, SuccessFilled } from '@element-plus/icons-vue'
+import { ref } from 'vue';
+let activeIndex = ref('/').value;
+let mainColor = ref('#1a9dff').value//激活标签颜色
 </script>
 
 <style lang="scss">
@@ -92,16 +88,13 @@ $mianColr: #1a9dff;
   .content {
     margin-top: 10px;
     display: flex;
-    .icon {
-      font-size: 25px;
-      color: $mianColr;
-      margin: 0 15px 0 5px;
-    }
+    align-items: center;
     .info {
       display: flex;
       flex-direction: column;
       font-size: 12px;
       color: #6c757d;
+      margin-left: 15px;
       .versions {
         font-size: 16px;
         color: $mianColr;
@@ -161,9 +154,9 @@ $mianColr: #1a9dff;
         justify-content: center;
         height: 100%;
       }
-      > a{
+      > a {
         height: 100%;
-        display:flex;
+        display: flex;
         align-items: center;
       }
     }
