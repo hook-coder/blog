@@ -16,6 +16,11 @@ const routes: Array<RouteRecordRaw> = [
     path:"/Other",
     name:'Other',
     component:()=> import("../views/Other.vue")
+  },
+  {
+    path:"/Dtails",
+    name:'Dtails',
+    component:()=> import("../views/Dtails.vue")
   }
 ];
 console.log(process.env,'process.env.BASE_URL');

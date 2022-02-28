@@ -3,8 +3,10 @@
     <div class="welcome common">
       <div class="welcome-left">
         <h2>欢迎来到AFLY-BLOG</h2>
-        <span><a href="#">本站GITHUB</a></span>
-        <img src="../assets/welcome.png" alt="" />
+        <span>
+          <a href="#">本站GITHUB</a>
+        </span>
+        <img src="../assets/welcome.png" alt />
       </div>
       <div class="welcome-right">
         <span class="title">
@@ -12,9 +14,7 @@
           <span class="english-title">—INTRODUcontentCTION</span>
         </span>
         <div class="common-content">
-          <p>
-            搭建该博客的目的在于想积攒一些技能技巧，温故而知新一些知识点，搭建BLOG的想法是我还没毕业就开始了有了，但一直没实行的原因是毕业后都忙于工作很少时间可以去写BLOG，拖了好久，才终于动手，该版本为vue2.0/cli4.0/element-ui构建，等后面会升级为vue3.0版本。
-          </p>
+          <p>搭建该博客的目的在于想积攒一些技能技巧，温故而知新一些知识点，搭建BLOG的想法是我还没毕业就开始了有了，但一直没实行的原因是毕业后都忙于工作很少时间可以去写BLOG，拖了好久，才终于动手，该版本为vue2.0/cli4.0/element-ui构建，等后面会升级为vue3.0版本。</p>
         </div>
       </div>
       <!-- 点缀 -->
@@ -33,13 +33,13 @@
         <span class="english-title">—ARTICLE</span>
       </span>
       <ul class="article-content common-content">
-        <li class="article-content-item" v-for="(n,i) in 8" :key="i">
+        <li class="article-content-item" v-for="(n, i) in 8" :key="i">
           <div class="headline">
             <div class="headline-left">
               <el-tag class="headline-type" type="danger" size="small" effect="light">学</el-tag>
               <!-- <el-tag class="headline-type" type="-" size="small" effect="light">教</el-tag>
               <el-tag class="headline-type" type="warning" size="small" effect="light">原</el-tag>
-              <el-tag class="headline-type" type="success" size="small" effect="plain">转</el-tag> -->
+              <el-tag class="headline-type" type="success" size="small" effect="plain">转</el-tag>-->
               <a href="#">TypeScript的枚举进阶</a>
             </div>
           </div>
@@ -49,7 +49,7 @@
             <el-tag type="success" size="small" effect="dark">vue</el-tag>
             <el-tag type="info" size="small" effect="dark">ajax</el-tag>
             <el-tag type="warning" size="small" effect="dark">html</el-tag>
-            <el-tag type="danger" size="small" effect="dark" v-for="(n,i) in 1" :key="i">css</el-tag>
+            <el-tag type="danger" size="small" effect="dark" v-for="(n, i) in 1" :key="i">css</el-tag>
           </div>
           <p class="synopsis">
             枚举是 TypeScript
@@ -57,18 +57,23 @@
             却没有。使用枚举，我们可以给一些难以理解的常量赋予一组具有意义的直观的名字，使其更为直观。
           </p>
           <div class="writer">
-            <span><i class="el-icon-edit-outline"></i>作者：AFLY</span>
-            <span><i class="el-icon-date"></i>发布时间：2020-05-20</span>
-            <span><i class="el-icon-s-data"></i>热度：5200</span>
-            <el-button class="original-btn"><a href="#">阅读详情</a></el-button>
+            <span>
+              <i class="el-icon-edit-outline"></i>作者：AFLY
+            </span>
+            <span>
+              <i class="el-icon-date"></i>发布时间：2020-05-20
+            </span>
+            <span>
+              <i class="el-icon-s-data"></i>热度：5200
+            </span>
+            <el-button class="original-btn">
+              <!-- <a href="#">阅读详情</a> -->
+              <router-link to="Dtails">阅读详情</router-link>
+            </el-button>
           </div>
         </li>
         <div class="paging">
-          <el-pagination
-            background
-            layout="prev, pager, next"
-            :total="1000">
-          </el-pagination>
+          <el-pagination background layout="prev, pager, next" :total="1000"></el-pagination>
         </div>
       </ul>
     </div>
@@ -244,8 +249,8 @@ main {
       display: flex;
       flex-direction: column;
       li {
-        &:first-child{
-          padding-top:0
+        &:first-child {
+          padding-top: 0;
         }
         cursor: pointer;
         display: flex;
@@ -288,11 +293,11 @@ main {
             color: #f56c6c;
           }
         }
-        .technology{
+        .technology {
           display: flex;
           flex-wrap: wrap;
           margin: 12px 0 5px;
-          span{
+          span {
             margin: 0 3px 3px 0;
           }
         }
@@ -302,7 +307,7 @@ main {
           text-align: left;
           line-height: 24px;
         }
-        .writer{
+        .writer {
           width: 100%;
           font-size: 14px;
           display: flex;
@@ -310,24 +315,24 @@ main {
           justify-content: space-between;
           color: #666;
           padding: 5px 0;
-          span{
-            margin-right:15px;
-            i{
+          span {
+            margin-right: 15px;
+            i {
               margin-right: 3px;
-              color:$mianColor;
+              color: $mianColor;
             }
           }
-          .original-btn{
-            &:hover a{
-              color:$mianColor;
+          .original-btn {
+            &:hover a {
+              color: $mianColor;
             }
-            a{
-              color:#666;
+            a {
+              color: #666;
             }
           }
         }
       }
-      .paging{
+      .paging {
         padding: 20px 0 0;
       }
     }

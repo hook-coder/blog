@@ -17,7 +17,7 @@
           :ellipsis="false"
         >
           <el-menu-item index="/">首页</el-menu-item>
-          <el-menu-item index="archive">归档</el-menu-item>
+          <!-- <el-menu-item index="archive">归档</el-menu-item> -->
           <!-- <el-sub-menu index="other">
             <template #title>其他</template>
             <el-menu-item index="other">摸鱼</el-menu-item>

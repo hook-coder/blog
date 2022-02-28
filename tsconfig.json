@@ -1,23 +1,28 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "module": "esnext",
-    "strict": true,
+    "strict": false,
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
-    "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "noImplicitAny": false,
+    "strictFunctionTypes": false,
+    "strictBindCallApply": false,
+    "skipLibCheck": true,
     "types": [
-      "webpack-env"
+      "node"
     ],
     "paths": {
-      "@/*": [
+      "@root/*": [
         "src/*"
-      ]
+      ],
     },
     "lib": [
       "esnext",
@@ -30,10 +35,9 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
+    "src/**/*.md",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "tests/**/*.tsx",
+    "src/lib/uploader.js"
   ],
-  "exclude": [
-    "node_modules"
-  ]
 }

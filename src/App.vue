@@ -1,9 +1,11 @@
 <template>
-  <Header />
-  <router-view />
-  <Footer />
-  <FloatBtns />
-  <Bg />
+  <div>
+    <Header />
+    <router-view />
+    <Footer />
+    <FloatBtns />
+    <Bg />
+  </div>
 </template>
 
 <script lang="ts">
